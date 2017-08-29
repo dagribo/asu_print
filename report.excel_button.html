@@ -1,0 +1,26 @@
+
+<div class=exel_but>
+     <button type="button" (click)="excelexport.save()">Экспортировать в EXCEL</button>
+</div>
+<kendo-excelexport [data]=this.printers fileName="Report.xlsx" #excelexport>
+        <kendo-excelexport-column field="job_status" title="Какой-то статус" [width]="150" 
+        [cellOptions]="cellOpt"
+        [headerCellOptions]="{ textAlign: 'center' }">
+        </kendo-excelexport-column>
+        <kendo-excelexport-column field="job_pages" title="Количество страниц" [width]="150" 
+        [cellOptions]="cellOpt" 
+        [headerCellOptions]="{ textAlign: 'center' }">
+        </kendo-excelexport-column>
+        <kendo-excelexport-column field="job_size" title="Размер файла" [width]="150" 
+        [cellOptions]="cellOpt" 
+        [headerCellOptions]="{ textAlign: 'center' }">
+        </kendo-excelexport-column>
+        <kendo-excelexport-column field="print_job_owner" title="Имя пользователя" [width]="350" 
+        [cellOptions]="cellOpt" 
+        [headerCellOptions]="{ textAlign: 'center' }">
+        </kendo-excelexport-column>
+        <kendo-excelexport-column field="document_name" title="Имя документа" [width]="450" 
+        [cellOptions]="cellOpt" 
+        [headerCellOptions]="{ textAlign: 'center' }">
+        </kendo-excelexport-column>
+</kendo-excelexport>
